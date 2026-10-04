@@ -1,0 +1,8 @@
+# Cloudflare Pages 用の配信ヘッダー（他のホスティングでは無視される。nginx 等は fonts/README.md 参照）
+# フォント・CSS・JS はファイル名にハッシュが入る（Hugo fingerprint）ので、内容が変わればファイル名が変わる＝長期キャッシュして安全
+/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+/css/*
+  Cache-Control: public, max-age=31536000, immutable
+/js/*
+  Cache-Control: public, max-age=31536000, immutable
